@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#061a35" />
+    <meta name="description" content="KI Atlas: soporte TI, seguridad y soluciones digitales para empresas." />
+    <title>KI Atlas | El control que sostiene tu operación</title>
+    <style>
+      :root { --ink:#061a35; --ink-2:#0b2d50; --blue:#00bde9; --soft:#e9f9ff; --gold:#f7ba2c; --text:#113555; --muted:#63809a; --line:#cce9f4; --white:#fff; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; background:#f5fbfe; color:var(--text); font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      a { color:inherit; text-decoration:none; }
+      .wrap { width:min(1160px, calc(100% - 40px)); margin:auto; }
+      .hero { min-height:760px; position:relative; overflow:hidden; isolation:isolate; color:#fff; background:radial-gradient(circle at 86% 13%, rgba(0,190,233,.25), transparent 22%), radial-gradient(circle at 16% 78%, rgba(0,137,201,.24), transparent 28%), linear-gradient(135deg,#031126 0%,#07264a 55%,#04162f 100%); }
+      .hero:before,.hero:after { content:""; pointer-events:none; position:absolute; inset:0; z-index:-1; background-image:radial-gradient(circle, rgba(66,207,244,.65) 0 2px, transparent 3px), radial-gradient(circle, rgba(247,186,44,.85) 0 2px, transparent 3px); background-size:180px 180px, 290px 290px; background-position:20px 70px, 80px 130px; opacity:.45; mask-image:linear-gradient(to bottom,transparent,black 15%,black 83%,transparent); }
+      .hero:after { transform:rotate(-12deg) scale(1.25); background-image:linear-gradient(112deg,transparent 49.7%,rgba(42,189,233,.15) 50%,transparent 50.3%), linear-gradient(35deg,transparent 49.7%,rgba(247,186,44,.13) 50%,transparent 50.3%); background-size:210px 230px; opacity:.8; }
+      nav { min-height:92px; display:flex; align-items:center; justify-content:space-between; gap:20px; position:relative; z-index:2; }
+      .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.02em; }
+      .brand-dot { width:13px; height:13px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px rgba(247,186,44,.13); }
+      .nav-links { display:flex; align-items:center; gap:26px; color:#c8eafa; font-size:.91rem; }
+      .nav-links a:hover { color:#fff; }
+      .nav-cta,.button { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 21px; border-radius:12px; font-weight:800; transition:.2s ease; }
+      .nav-cta { color:#072444; background:#e9fbff; font-size:.88rem; }
+      .nav-cta:hover,.button:hover { transform:translateY(-2px); box-shadow:0 12px 25px rgba(0,189,233,.2); }
+      .hero-grid { display:grid; grid-template-columns:1.12fr .88fr; gap:58px; align-items:center; min-height:620px; padding:56px 0 90px; }
+      .eyebrow { display:flex; align-items:center; gap:10px; color:#71def6; text-transform:uppercase; font-size:.74rem; letter-spacing:.15em; font-weight:800; }
+      .eyebrow:before { content:""; height:1px; width:36px; background:var(--gold); }
+      h1 { margin:19px 0 23px; max-width:700px; font-size:clamp(3.05rem,6vw,5.6rem); line-height:.99; letter-spacing:-.065em; }
+      h1 em { color:#5edcfb; font-style:normal; }
+      .hero-copy { max-width:580px; color:#c4e4f3; font-size:1.16rem; line-height:1.7; }
+      .hero-actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:32px; }
+      .button.primary { color:#05213e; background:linear-gradient(120deg,#56dffd,#00b3e1); }
+      .button.secondary { color:#e7faff; border:1px solid rgba(147,222,246,.45); background:rgba(8,46,78,.34); }
+      .proof { display:flex; gap:22px; margin-top:46px; color:#a5d7e9; font-size:.84rem; }
+      .proof span { display:flex; align-items:center; gap:8px; }
+      .proof i { width:7px; height:7px; border-radius:50%; background:var(--gold); box-shadow:0 0 13px var(--gold); }
+      .hero-mark { position:relative; display:grid; place-items:center; min-height:420px; }
+      .hero-mark:before { content:""; position:absolute; width:410px; height:410px; border:1px solid rgba(90,216,250,.28); border-radius:50%; box-shadow:0 0 0 34px rgba(12,115,167,.07), 0 0 0 70px rgba(19,156,210,.045); }
+      .orbit { position:absolute; width:450px; height:190px; border:1px dashed rgba(91,224,252,.46); border-radius:50%; transform:rotate(-19deg); }
+      .orbit.gold { width:350px; height:470px; border-color:rgba(247,186,44,.65); transform:rotate(37deg); }
+      .logo-panel { position:relative; z-index:1; width:min(100%,400px); padding:26px; border-radius:34px; background:linear-gradient(145deg,rgba(20,67,103,.68),rgba(5,22,47,.56)); border:1px solid rgba(129,221,248,.28); box-shadow:0 30px 80px rgba(0,0,0,.35); backdrop-filter:blur(15px); }
+      .logo-panel img { display:block; width:100%; border-radius:23px; }
+      .signal { position:absolute; width:14px; height:14px; border:2px solid #fff; background:#00c7ed; transform:rotate(45deg); box-shadow:0 0 22px #00c7ed; }
+      .signal.one { top:55px; right:17px; }.signal.two { left:4px; bottom:70px; width:12px; height:12px; border-color:var(--gold); background:var(--gold); box-shadow:0 0 20px var(--gold); }
+      .strip { background:#fff; border-bottom:1px solid var(--line); }
+      .strip-grid { display:grid; grid-template-columns:repeat(3,1fr); }
+      .strip-item { padding:27px 30px; border-right:1px solid var(--line); font-size:.95rem; color:#4c718c; }
+      .strip-item b { display:block; color:#0c4773; font-size:1.08rem; margin-bottom:3px; }
+      section { padding:110px 0; }
+      .section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:46px; }
+      .section-kicker { color:#0589b5; font-weight:800; letter-spacing:.13em; text-transform:uppercase; font-size:.73rem; }
+      h2 { font-size:clamp(2.25rem,4vw,3.7rem); letter-spacing:-.055em; line-height:1.03; margin:10px 0 0; color:#092d52; }
+      .section-intro { max-width:440px; color:var(--muted); line-height:1.7; margin:0; }
+      .services { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+      .service { min-height:275px; padding:28px; border:1px solid var(--line); border-radius:20px; background:#fff; position:relative; overflow:hidden; transition:.25s; }
+      .service:hover { transform:translateY(-7px); border-color:#86d9ef; box-shadow:0 18px 38px rgba(28,109,145,.1); }
+      .icon { width:49px; height:49px; display:grid; place-items:center; margin-bottom:58px; border-radius:14px; background:#e6f9ff; color:#007fad; font-size:1.35rem; }
+      .service:nth-child(2) .icon,.service:nth-child(5) .icon { color:#ad7610; background:#fff6df; }
+      .service h3 { margin:0 0 9px; color:#0d4068; font-size:1.18rem; }
+      .service p { margin:0; color:#64839b; line-height:1.6; font-size:.94rem; }
+      .service .n { position:absolute; top:18px; right:22px; color:#b1d7e5; font-size:.78rem; font-weight:800; }
+      .dark { background:linear-gradient(130deg,#062042,#0a3a63); color:#fff; position:relative; overflow:hidden; }
+      .dark:before { content:""; position:absolute; width:700px; height:700px; border-radius:50%; right:-320px; top:-280px; border:1px solid rgba(97,222,250,.25); box-shadow:0 0 0 65px rgba(52,189,224,.06),0 0 0 130px rgba(52,189,224,.035); }
+      .dark h2 { color:white; }.dark .section-kicker { color:#69dcf6; }.dark .section-intro { color:#b5d7e6; }
+      .flow { display:grid; grid-template-columns:repeat(5,1fr); position:relative; gap:15px; }
+      .flow:before { content:""; position:absolute; top:33px; left:9%; right:9%; border-top:1px dashed rgba(120,225,249,.55); }
+      .step { position:relative; z-index:1; }.step-number { width:66px; height:66px; display:grid; place-items:center; border:1px solid rgba(113,225,250,.55); border-radius:50%; background:#0a3e67; color:#79e8ff; font-weight:850; }.step:nth-child(3) .step-number { background:#f7ba2c; color:#092d52; border-color:#ffe29b; }.step h3 { margin:18px 0 7px; font-size:1rem; }.step p { margin:0; color:#b9d9e8; font-size:.89rem; line-height:1.55; }
+      .split { display:grid; grid-template-columns:.92fr 1.08fr; gap:60px; align-items:center; }
+      .security-card { padding:40px; border-radius:26px; background:linear-gradient(145deg,#e1f9ff,#fff); border:1px solid #bce8f4; position:relative; overflow:hidden; }
+      .security-card:after { content:""; position:absolute; width:175px; height:175px; right:-50px; top:-45px; border:2px solid rgba(0,183,225,.2); border-radius:40% 60% 57% 43%; }
+      .shield { font-size:3.5rem; margin-bottom:20px; }.security-card h3 { color:#0b426b; font-size:1.55rem; margin:0 0 9px; }.security-card p { color:#63809a; margin:0; line-height:1.65; }
+      .checklist { display:grid; gap:16px; }.check { display:flex; gap:14px; align-items:flex-start; padding:17px 0; border-bottom:1px solid #d7ecf4; }.check:last-child { border:0; }.check b { display:block; color:#103e61; margin-bottom:4px; }.check span { color:#63809a; font-size:.93rem; line-height:1.5; }.tick { flex:0 0 25px; height:25px; display:grid; place-items:center; border-radius:50%; background:#dff9f1; color:#008c70; font-size:.77rem; font-weight:900; }
+      .contact { padding:105px 0; color:#fff; background:linear-gradient(130deg,#04152e,#06365c); position:relative; overflow:hidden; }.contact:after { content:""; position:absolute; inset:auto -100px -250px auto; width:550px; height:550px; border:1px solid rgba(121,229,251,.28); border-radius:50%; box-shadow:0 0 0 55px rgba(121,229,251,.06),0 0 0 110px rgba(121,229,251,.04); }.contact-grid { position:relative; z-index:1; display:grid; grid-template-columns:1fr .9fr; align-items:center; gap:60px; }.contact h2 { color:#fff; }.contact p { color:#bddcea; max-width:540px; font-size:1.08rem; line-height:1.7; }.contact-box { padding:32px; border-radius:24px; border:1px solid rgba(131,223,247,.3); background:rgba(8,56,88,.55); backdrop-filter:blur(12px); }.contact-box h3 { margin:0 0 22px; font-size:1.3rem; }.contact-link { display:flex; align-items:center; justify-content:space-between; gap:15px; padding:17px 0; border-top:1px solid rgba(173,227,244,.2); color:#e5faff; }.contact-link small { display:block; color:#91c6d9; margin-bottom:3px; }.contact-link strong { font-size:1rem; }.contact-link .arrow { color:var(--gold); font-size:1.4rem; }
+      footer { padding:28px 0; background:#031126; color:#9cc2d4; font-size:.84rem; }.footer-row { display:flex; justify-content:space-between; gap:20px; }.footer-row b { color:#fff; }
+      @media(max-width:820px){ .nav-links{display:none}.hero{min-height:auto}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero-grid{padding-top:42px;gap:15px}.hero-mark{min-height:350px;order:-1}.logo-panel{width:270px;padding:18px}.hero-mark:before{width:285px;height:285px}.orbit{width:330px;height:145px}.orbit.gold{width:270px;height:340px}h1{font-size:3.25rem}.strip-grid{grid-template-columns:1fr}.strip-item{border-right:0;border-bottom:1px solid var(--line)}.services{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr;gap:30px}.flow:before{display:none}.section-head{display:block}.section-intro{margin-top:20px}section{padding:75px 0}.proof{flex-wrap:wrap}.contact{padding:75px 0} }
+      @media(max-width:520px){.wrap{width:min(100% - 30px,1160px)}nav{min-height:75px}.brand{font-size:.9rem}.nav-cta{padding:11px 14px;font-size:.78rem}.hero-grid{padding-bottom:62px}.hero-copy{font-size:1rem}.services{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.proof{gap:13px}.button{width:100%}.footer-row{display:block}.footer-row p{margin-top:10px}.security-card{padding:28px}.contact-box{padding:24px}}
+    </style>
+  </head>
+  <body>
+    <header class="hero" id="inicio">
+      <div class="wrap">
+        <nav>
+          <a class="brand" href="#inicio"><span class="brand-dot"></span> KI Atlas</a>
+          <div class="nav-links"><a href="#servicios">Servicios</a><a href="#metodo">Cómo trabajamos</a><a href="#seguridad">Seguridad</a></div>
+          <a class="nav-cta" href="https://wa.me/56935965262" target="_blank" rel="noreferrer">Hablemos por WhatsApp ↗</a>
+        </nav>
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Soporte TI para empresas</div>
+            <h1>El control que <em>sostiene</em> tu operación.</h1>
+            <p class="hero-copy">Tecnología clara, segura y ordenada para empresas que necesitan avanzar sin que sus equipos, datos o procesos se conviertan en un problema.</p>
+            <div class="hero-actions"><a class="button primary" href="https://wa.me/56935965262" target="_blank" rel="noreferrer">Solicitar evaluación <span>→</span></a><a class="button secondary" href="#servicios">Conocer servicios</a></div>
+            <div class="proof"><span><i></i> Atención humana y directa</span><span><i></i> Seguridad desde el inicio</span></div>
+          </div>
+          <div class="hero-mark" aria-label="KI Atlas"><div class="orbit"></div><div class="orbit gold"></div><span class="signal one"></span><span class="signal two"></span><div class="logo-panel"><img src="ki-atlas-logo.png" alt="Logo KI Atlas: el control que sostiene tu operación" /></div></div>
+        </div>
+      </div>
+    </header>
+    <div class="strip"><div class="wrap strip-grid"><div class="strip-item"><b>Soporte TI</b>Incidencias, usuarios y continuidad operativa.</div><div class="strip-item"><b>Seguridad</b>Prevención, control y cuidado de tu información.</div><div class="strip-item"><b>Soluciones digitales</b>Web, automatización e integración a medida.</div></div></div>
+    <main>
+      <section id="servicios"><div class="wrap"><div class="section-head"><div><div class="section-kicker">Servicios KI Atlas</div><h2>Tu operación, respaldada<br />por tecnología con propósito.</h2></div><p class="section-intro">No se trata solo de arreglar computadores. Se trata de dar orden, seguimiento y protección a lo que permite que tu empresa funcione.</p></div><div class="services"><article class="service"><span class="n">01</span><div class="icon">⌁</div><h3>Soporte TI</h3><p>Atención remota y presencial para resolver incidencias sin detener tu jornada.</p></article><article class="service"><span class="n">02</span><div class="icon">◈</div><h3>Gestión de activos</h3><p>Controla equipos, responsables, ubicaciones, movimientos e historial técnico.</p></article><article class="service"><span class="n">03</span><div class="icon">◌</div><h3>Ciberseguridad</h3><p>Revisión de accesos, respaldo, riesgos y prácticas que cuidan tus datos.</p></article><article class="service"><span class="n">04</span><div class="icon">↗</div><h3>Redes y continuidad</h3><p>Apoyo en conectividad, correo, infraestructura y operación diaria.</p></article><article class="service"><span class="n">05</span><div class="icon">✦</div><h3>Soluciones digitales</h3><p>Páginas web, automatizaciones e integraciones para trabajar mejor.</p></article><article class="service"><span class="n">06</span><div class="icon">✓</div><h3>Gestión con trazabilidad</h3><p>Tickets e historial para que cada solicitud tenga seguimiento y respuesta.</p></article></div></div></section>
+      <section class="dark" id="metodo"><div class="wrap"><div class="section-head"><div><div class="section-kicker">Método de trabajo</div><h2>Orden antes.<br />Solución durante.<br />Control después.</h2></div><p class="section-intro">Cada caso se atiende con un proceso claro. Así la tecnología deja de depender de urgencias y empieza a funcionar con continuidad.</p></div><div class="flow"><div class="step"><div class="step-number">01</div><h3>Escuchamos</h3><p>Entendemos el contexto, la urgencia y el impacto real.</p></div><div class="step"><div class="step-number">02</div><h3>Diagnosticamos</h3><p>Evaluamos el problema antes de intervenir.</p></div><div class="step"><div class="step-number">03</div><h3>Resolvemos</h3><p>Aplicamos una solución clara y comunicada.</p></div><div class="step"><div class="step-number">04</div><h3>Registramos</h3><p>El trabajo queda documentado y trazable.</p></div><div class="step"><div class="step-number">05</div><h3>Prevenimos</h3><p>Transformamos incidencias en mejoras futuras.</p></div></div></div></section>
+      <section id="seguridad"><div class="wrap split"><div class="security-card"><div class="shield">◈</div><h3>La seguridad es parte del servicio.</h3><p>Tu empresa no debería preguntarse dónde están sus equipos, quién tiene acceso o qué pasó con una incidencia importante.</p></div><div><div class="section-kicker">Seguridad y confianza</div><h2>Tu información merece más que una respuesta rápida.</h2><div class="checklist"><div class="check"><div class="tick">✓</div><div><b>Accesos con responsabilidad</b><span>Revisamos perfiles, usuarios y prácticas de acceso según la realidad de tu empresa.</span></div></div><div class="check"><div class="tick">✓</div><div><b>Historial y trazabilidad</b><span>Los cambios importantes quedan registrados para mantener control y claridad.</span></div></div><div class="check"><div class="tick">✓</div><div><b>Prevención continua</b><span>Detectamos riesgos y proponemos mejoras antes de que se conviertan en urgencias.</span></div></div></div></div></div></section>
+      <section class="contact" id="contacto"><div class="wrap contact-grid"><div><div class="section-kicker">Hablemos</div><h2>Que la tecnología vuelva a trabajar a favor de tu empresa.</h2><p>Cuéntanos qué necesitas. Revisamos tu situación y te proponemos una alternativa clara, realista y acorde a tu operación.</p><a class="button primary" href="https://wa.me/56935965262" target="_blank" rel="noreferrer">Escribir por WhatsApp <span>→</span></a></div><div class="contact-box"><h3>Canales de contacto</h3><a class="contact-link" href="https://wa.me/56935965262" target="_blank" rel="noreferrer"><span><small>WhatsApp</small><strong>+56 9 3596 5262</strong></span><span class="arrow">→</span></a><a class="contact-link" href="https://www.instagram.com/kiatlas_oficial?rpxt=MXRqc2IzMHE0ZTducQ==" target="_blank" rel="noreferrer"><span><small>Instagram</small><strong>@kiatlas_oficial</strong></span><span class="arrow">→</span></a></div></div></section>
+    </main>
+    <footer><div class="wrap footer-row"><b>KI Atlas</b><p>Soporte TI · Seguridad · Soluciones digitales</p><p>© 2026 KI Atlas</p></div></footer>
+  </body>
+</html>
